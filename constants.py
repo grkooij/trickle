@@ -1,0 +1,21 @@
+N_X=800
+N_Y=800
+
+L_X=1.
+L_Y=1.
+
+DT_INIT=1.e-4
+T_END=20.
+T_SAVE_EVERY=.1
+
+CFL=0.6
+CFL_VAR=1.1
+
+GAMMA = 5./3.
+
+RHO=0
+VX=1
+VY=2
+P=3
+
+N_COM = 4
