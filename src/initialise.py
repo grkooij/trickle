@@ -1,5 +1,5 @@
 import numpy as np
-from constants import N_X, N_Y, L_X, L_Y
+from src.constants import N_X, N_Y, L_X, L_Y
 import matplotlib.pyplot as plt
 
 def initialise():

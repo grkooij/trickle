@@ -1,10 +1,10 @@
 import numba as nb
 from numba import njit
 import numpy as np
-from constants import RHO, VX, VY, P
-from constants import N_COM, GAMMA
-from constants import N_X, N_Y, L_X, L_Y
-from constants import CFL, CFL_VAR
+from src.constants import RHO, VX, VY, P
+from src.constants import N_COM, GAMMA
+from src.constants import N_X, N_Y, L_X, L_Y
+from src.constants import CFL, CFL_VAR
 
 
 @njit

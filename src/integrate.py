@@ -1,6 +1,6 @@
 from numba import njit
 import numpy as np
-from riemann import riemann
+from src.riemann import riemann
 
 def evolve(data, dt):
     data = riemann(data, dt)
