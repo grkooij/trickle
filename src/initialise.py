@@ -15,9 +15,9 @@ def initialise():
     y = np.linspace(0, L_Y, N_Y, dtype=np.float64)
 
     xx, yy = np.meshgrid(x, y, indexing='ij')
-    b_upper = 0.7
-    b_lower = 0.3
-    amp = 0.01
+    b_upper = 0.75
+    b_lower = 0.25
+    amp = 0.03
 
     for i in range(N_X):
         for j in range(N_Y):
@@ -26,20 +26,22 @@ def initialise():
             X = xx[i,j]
 
             if X > b_lower and X < b_upper:
-                vx[i,j]  = -vel
-                rho[i,j] = 2.0
+                vx[i,j]  = vel
+                rho[i,j] = 3.0
             
             if X <= b_lower:
-                vx[i,j]  = vel
+                vx[i,j]  = -vel
                 rho[i,j] = 1.0
 
             if X >= b_upper:
-                vx[i,j]  = vel
+                vx[i,j]  = -vel
                 rho[i,j] = 1.0
 
             sigma = 0.05/np.sqrt(2)
-            vy[i,j] = amp*np.sin(2*np.pi*Y)*(np.exp(-(X - b_lower)*(X - b_lower)/2./sigma/sigma) + np.exp(-(X - b_upper)*(X - b_upper)/2./sigma/sigma))
+            vy[i,j] = amp*np.sin(4*np.pi*Y)*(-np.exp(-(X - b_lower)*(X - b_lower)/2./sigma/sigma) - np.exp(-(X - b_upper)*(X - b_upper)/2./sigma/sigma))
 
+    plt.imshow(vy)
+    plt.show()
     p += 2.5
 
     data = np.array([rho, vx, vy, p])

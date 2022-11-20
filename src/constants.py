@@ -1,5 +1,5 @@
-N_X=800
-N_Y=800
+N_X=200
+N_Y=200
 
 L_X=1.
 L_Y=1.
@@ -8,7 +8,7 @@ DT_INIT=1.e-4
 T_END=20.
 T_SAVE_EVERY=.1
 
-CFL=0.6
+CFL=1.0
 CFL_VAR=1.1
 
 GAMMA = 5./3.

@@ -1,9 +1,9 @@
 
-from integrate import evolve
-from initialise import initialise
-from save_file import save_file
+from src.integrate import evolve
+from src.initialise import initialise
+from src.save_file import save_file
 import matplotlib.pyplot as plt
-from constants import DT_INIT, T_END, T_SAVE_EVERY
+from src.constants import DT_INIT, T_END, T_SAVE_EVERY
 	
 def main():
 
@@ -30,7 +30,7 @@ def main():
 			save_file(data, n_file)
 
 			plt.imshow(data[0], vmin=0.9, vmax=2.1)
-			plt.savefig("Data/data0-{}.png".format(n_file))
+			plt.savefig("Data/data0-{}.png".format(n_file), dpi=400, bbox_inches='tight')
 
 			n_file+=1
 
