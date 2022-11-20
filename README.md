@@ -6,4 +6,4 @@ By default the initial conditions create a Kelvin-Helmholtz instability setup. D
 
 ## Example
 Example snapshot result for the 2D KH instability:
-![kh](https://github.com/grkooij/trickle/blob/main/kh.png)
+![kh](https://github.com/grkooij/trickle/blob/main/examples/kh.png)
